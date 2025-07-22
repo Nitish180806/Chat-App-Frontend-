@@ -64,7 +64,11 @@ function Chat() {
         ...prev,
         [selectedUser]: [
           ...prev[selectedUser],
-          { text: "Auto-reply : Got your message!", sender: "reply", time: replyTime },
+          {
+            text: "Auto-reply : Got your message!",
+            sender: "reply",
+            time: replyTime,
+          },
         ],
       }));
       setIsTyping(false);
