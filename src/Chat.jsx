@@ -105,12 +105,16 @@ function Chat() {
 
           <h1>{selectedUser}</h1>
 
-          <button
-            className={`toggle ${darkMode ? "active" : ""}`}
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            <div className="toggleO"></div>
-          </button>
+          <div className="togtext">
+            <span>{darkMode ? "Dark Mode" : "Light Mode"}</span>
+            <button
+              className={`toggle ${darkMode ? "active" : ""}`}
+              onClick={() => setDarkMode(!darkMode)}
+              // aria-label="Toggle dark mode"
+            >
+              <div className="toggleO"></div>
+            </button>
+          </div>
         </header>
 
         <div className="messages">
